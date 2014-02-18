@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
     s.header_mappings_dir = 'FloatingPanel'
 
-    s.dependency = 'KeyboardHandler'
+    s.dependency 'KeyboardHandler'
 
     s.source_files = 'FloatingPanel/**/*.{h,m}'
 end
