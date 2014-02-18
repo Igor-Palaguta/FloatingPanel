@@ -1,0 +1,14 @@
+PODS:
+  - KeyboardHandler (0.1.0)
+
+DEPENDENCIES:
+  - KeyboardHandler (from `https://github.com/Igor-Palaguta/KeyboardHandler.git`)
+
+EXTERNAL SOURCES:
+  KeyboardHandler:
+    :git: https://github.com/Igor-Palaguta/KeyboardHandler.git
+
+SPEC CHECKSUMS:
+  KeyboardHandler: 6fa1211d508e8445ac62516dafe368c8cc7fd248
+
+COCOAPODS: 0.29.0

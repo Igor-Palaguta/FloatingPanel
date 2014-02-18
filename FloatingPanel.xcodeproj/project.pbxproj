@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43FC863D57464513983A18DC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA0561F4CF240EC9FA1B1ED /* libPods.a */; };
+		7836F77018B38EB300C6831E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7836F76F18B38EB300C6831E /* Foundation.framework */; };
+		7836F79F18B38F8600C6831E /* FPFloatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7836F79B18B38F8600C6831E /* FPFloatingViewController.m */; };
+		7836F7A018B38F8600C6831E /* UIWindow+FloatingPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7836F79E18B38F8600C6831E /* UIWindow+FloatingPanel.m */; };
+		7836F7A318B391DA00C6831E /* UIView+FloatingPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7836F7A218B391DA00C6831E /* UIView+FloatingPanel.m */; };
+		7836F7A518B396A500C6831E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7836F7A418B396A500C6831E /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7836F76A18B38EB300C6831E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6BA0561F4CF240EC9FA1B1ED /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7836F76C18B38EB300C6831E /* libFloatingPanel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFloatingPanel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7836F76F18B38EB300C6831E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7836F77D18B38EB300C6831E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7836F78018B38EB300C6831E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7836F79618B38F6300C6831E /* FloatingPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatingPanel.h; sourceTree = "<group>"; };
+		7836F79818B38F6300C6831E /* FloatingPanel-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FloatingPanel-Prefix.pch"; sourceTree = "<group>"; };
+		7836F79A18B38F8600C6831E /* FPFloatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPFloatingViewController.h; sourceTree = "<group>"; };
+		7836F79B18B38F8600C6831E /* FPFloatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPFloatingViewController.m; sourceTree = "<group>"; };
+		7836F79D18B38F8600C6831E /* UIWindow+FloatingPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+FloatingPanel.h"; sourceTree = "<group>"; };
+		7836F79E18B38F8600C6831E /* UIWindow+FloatingPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+FloatingPanel.m"; sourceTree = "<group>"; };
+		7836F7A118B391DA00C6831E /* UIView+FloatingPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FloatingPanel.h"; sourceTree = "<group>"; };
+		7836F7A218B391DA00C6831E /* UIView+FloatingPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FloatingPanel.m"; sourceTree = "<group>"; };
+		7836F7A418B396A500C6831E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9C7CF3972D4F4175B31BA5DD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7836F76918B38EB300C6831E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7836F7A518B396A500C6831E /* UIKit.framework in Frameworks */,
+				7836F77018B38EB300C6831E /* Foundation.framework in Frameworks */,
+				43FC863D57464513983A18DC /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7836F76318B38EB300C6831E = {
+			isa = PBXGroup;
+			children = (
+				7836F79518B38F6300C6831E /* FloatingPanel */,
+				7836F79818B38F6300C6831E /* FloatingPanel-Prefix.pch */,
+				7836F76E18B38EB300C6831E /* Frameworks */,
+				7836F76D18B38EB300C6831E /* Products */,
+				9C7CF3972D4F4175B31BA5DD /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		7836F76D18B38EB300C6831E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7836F76C18B38EB300C6831E /* libFloatingPanel.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7836F76E18B38EB300C6831E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7836F7A418B396A500C6831E /* UIKit.framework */,
+				7836F76F18B38EB300C6831E /* Foundation.framework */,
+				7836F77D18B38EB300C6831E /* XCTest.framework */,
+				7836F78018B38EB300C6831E /* UIKit.framework */,
+				6BA0561F4CF240EC9FA1B1ED /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7836F79518B38F6300C6831E /* FloatingPanel */ = {
+			isa = PBXGroup;
+			children = (
+				7836F79C18B38F8600C6831E /* Detail */,
+				7836F79A18B38F8600C6831E /* FPFloatingViewController.h */,
+				7836F79B18B38F8600C6831E /* FPFloatingViewController.m */,
+				7836F79618B38F6300C6831E /* FloatingPanel.h */,
+			);
+			path = FloatingPanel;
+			sourceTree = "<group>";
+		};
+		7836F79C18B38F8600C6831E /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				7836F79D18B38F8600C6831E /* UIWindow+FloatingPanel.h */,
+				7836F79E18B38F8600C6831E /* UIWindow+FloatingPanel.m */,
+				7836F7A118B391DA00C6831E /* UIView+FloatingPanel.h */,
+				7836F7A218B391DA00C6831E /* UIView+FloatingPanel.m */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7836F76B18B38EB300C6831E /* FloatingPanel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7836F78F18B38EB300C6831E /* Build configuration list for PBXNativeTarget "FloatingPanel" */;
+			buildPhases = (
+				E5CC7123B9B4490B8161E75E /* Check Pods Manifest.lock */,
+				7836F76818B38EB300C6831E /* Sources */,
+				7836F76918B38EB300C6831E /* Frameworks */,
+				7836F76A18B38EB300C6831E /* CopyFiles */,
+				9E1EDA75C98C45638DCBB7AE /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FloatingPanel;
+			productName = FloatingPanel;
+			productReference = 7836F76C18B38EB300C6831E /* libFloatingPanel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7836F76418B38EB300C6831E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = IgorPalaguta;
+			};
+			buildConfigurationList = 7836F76718B38EB300C6831E /* Build configuration list for PBXProject "FloatingPanel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7836F76318B38EB300C6831E;
+			productRefGroup = 7836F76D18B38EB300C6831E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7836F76B18B38EB300C6831E /* FloatingPanel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9E1EDA75C98C45638DCBB7AE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5CC7123B9B4490B8161E75E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7836F76818B38EB300C6831E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7836F7A318B391DA00C6831E /* UIView+FloatingPanel.m in Sources */,
+				7836F79F18B38F8600C6831E /* FPFloatingViewController.m in Sources */,
+				7836F7A018B38F8600C6831E /* UIWindow+FloatingPanel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7836F78D18B38EB300C6831E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7836F78E18B38EB300C6831E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7836F79018B38EB300C6831E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C7CF3972D4F4175B31BA5DD /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/FloatingPanel.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FloatingPanel-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7836F79118B38EB300C6831E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C7CF3972D4F4175B31BA5DD /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/FloatingPanel.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FloatingPanel-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7836F76718B38EB300C6831E /* Build configuration list for PBXProject "FloatingPanel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7836F78D18B38EB300C6831E /* Debug */,
+				7836F78E18B38EB300C6831E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7836F78F18B38EB300C6831E /* Build configuration list for PBXNativeTarget "FloatingPanel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7836F79018B38EB300C6831E /* Debug */,
+				7836F79118B38EB300C6831E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7836F76418B38EB300C6831E /* Project object */;
+}
