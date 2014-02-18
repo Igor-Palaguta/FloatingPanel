@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "FloatingPanel"
-    s.version      = "0.1.0"
+    s.version      = "0.1.1"
     s.summary      = "FloatingPanel"
     s.homepage     = "https://github.com/Igor-Palaguta/FloatingPanel"
     s.license      = 'MIT'
@@ -10,6 +10,8 @@ Pod::Spec.new do |s|
     s.requires_arc = true
 
     s.header_mappings_dir = 'FloatingPanel'
+
+    s.dependency = 'KeyboardHandler', :git => 'https://github.com/Igor-Palaguta/KeyboardHandler.git'
 
     s.source_files = 'FloatingPanel/**/*.{h,m}'
 end
