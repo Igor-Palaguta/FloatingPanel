@@ -13,6 +13,7 @@
 		7836F7A018B38F8600C6831E /* UIWindow+FloatingPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7836F79E18B38F8600C6831E /* UIWindow+FloatingPanel.m */; };
 		7836F7A318B391DA00C6831E /* UIView+FloatingPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7836F7A218B391DA00C6831E /* UIView+FloatingPanel.m */; };
 		7836F7A518B396A500C6831E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7836F7A418B396A500C6831E /* UIKit.framework */; };
+		7836F7AC18B39A2E00C6831E /* FPFloatingSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7836F7AB18B39A2E00C6831E /* FPFloatingSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,8 @@
 		7836F7A118B391DA00C6831E /* UIView+FloatingPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FloatingPanel.h"; sourceTree = "<group>"; };
 		7836F7A218B391DA00C6831E /* UIView+FloatingPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FloatingPanel.m"; sourceTree = "<group>"; };
 		7836F7A418B396A500C6831E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7836F7AA18B39A2E00C6831E /* FPFloatingSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPFloatingSegue.h; sourceTree = "<group>"; };
+		7836F7AB18B39A2E00C6831E /* FPFloatingSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPFloatingSegue.m; sourceTree = "<group>"; };
 		9C7CF3972D4F4175B31BA5DD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +100,8 @@
 				7836F79A18B38F8600C6831E /* FPFloatingViewController.h */,
 				7836F79B18B38F8600C6831E /* FPFloatingViewController.m */,
 				7836F79618B38F6300C6831E /* FloatingPanel.h */,
+				7836F7AA18B39A2E00C6831E /* FPFloatingSegue.h */,
+				7836F7AB18B39A2E00C6831E /* FPFloatingSegue.m */,
 			);
 			path = FloatingPanel;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 				7836F7A318B391DA00C6831E /* UIView+FloatingPanel.m in Sources */,
 				7836F79F18B38F8600C6831E /* FPFloatingViewController.m in Sources */,
 				7836F7A018B38F8600C6831E /* UIWindow+FloatingPanel.m in Sources */,
+				7836F7AC18B39A2E00C6831E /* FPFloatingSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
