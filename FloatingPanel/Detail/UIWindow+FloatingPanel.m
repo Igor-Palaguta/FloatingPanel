@@ -4,7 +4,7 @@ static UIWindow* current_floating_window_ = nil;
 
 @implementation UIWindow (FloatingPanel)
 
-+(NSMutableArray*)floatingWindowStack
++(NSMutableArray*)fp_floatingWindowStack
 {
    static NSMutableArray* stack_ = nil;
    if ( !stack_ )
@@ -14,23 +14,23 @@ static UIWindow* current_floating_window_ = nil;
    return stack_;
 }
 
-+(UIWindow*)currentFloatingWindow
++(UIWindow*)fp_currentFloatingWindow
 {
-   return [ [ self floatingWindowStack ] lastObject ];
+   return [ [ self fp_floatingWindowStack ] lastObject ];
 }
 
-+(void)pushFloatingWindow:( UIWindow* )window_
++(void)fp_pushFloatingWindow:( UIWindow* )window_
 {
-   NSAssert( ![ [ self floatingWindowStack ] containsObject: window_ ], @"This window already pushed" );
+   NSAssert( ![ [ self fp_floatingWindowStack ] containsObject: window_ ], @"This window already pushed" );
 
-   [ [ self floatingWindowStack ] addObject: window_ ];
+   [ [ self fp_floatingWindowStack ] addObject: window_ ];
    [ window_ makeKeyAndVisible ];
 }
 
-+(void)popFloatingWindow
++(void)fp_popFloatingWindow
 {
    //NSAssert( [ [ self floatingWindowStack ] count ] > 0, @"Nothing to pop" );
-   [ [ self floatingWindowStack ] removeLastObject ];
+   [ [ self fp_floatingWindowStack ] removeLastObject ];
 }
 
 @end

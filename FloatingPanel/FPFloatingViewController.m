@@ -44,31 +44,6 @@ static CGFloat FPDefaultAnimationTime = 0.3f;
 
 @end
 
-@implementation UIViewController (FPFloatingViewController_Private)
-
--(CGFloat)fp_bottomMarginInFloatingViewController
-{
-   return 20.f;
-}
-
--(CGFloat)fp_contentHeightInFloatingViewController
-{
-   CGFloat height_ = self.contentSizeForViewInPopover.height;
-   return height_ == 0.f ? 0.f : height_ + [ self fp_bottomMarginInFloatingViewController ];
-}
-
--(BOOL)fp_shouldShowFloatingHeader
-{
-   return YES;
-}
-
--(BOOL)fp_shouldAddContentBackground
-{
-   return YES;
-}
-
-@end
-
 @implementation FPFloatingViewController
 
 @synthesize overlayView = _overlayView;
@@ -100,13 +75,13 @@ static CGFloat FPDefaultAnimationTime = 0.3f;
        
        CGFloat visible_part_ = visible_height_ == 0.f ? 0.f : visible_height_ / CGRectGetMaxY( self.floatingView.bounds );
        
-       [ UIWindow currentFloatingWindow ].backgroundColor = [ self overlayColorWithVisiblePart: visible_part_ ];
+       [ UIWindow fp_currentFloatingWindow ].backgroundColor = [ self overlayColorWithVisiblePart: visible_part_ ];
     }
                       completion: ^( BOOL result_ )
     {
        if ( hide_ )
        {
-          [ UIWindow popFloatingWindow ];
+          [ UIWindow fp_popFloatingWindow ];
        }
 
        if ( completion_ )
@@ -377,7 +352,7 @@ static CGFloat FPDefaultAnimationTime = 0.3f;
        if ( completion_ ) completion_();
     } ];
 
-   [ UIWindow pushFloatingWindow: floating_window_ ];
+   [ UIWindow fp_pushFloatingWindow: floating_window_ ];
 }
 
 -(void)dismissFloatingViewController:( UIViewController* )controller_
@@ -390,7 +365,7 @@ static CGFloat FPDefaultAnimationTime = 0.3f;
 -(void)dismissFloatingViewControllerAnimated:( BOOL )animated_
                                   completion:( FPFloatingViewControllerCompletionBlock )completion_
 {
-   UIViewController* root_controller_ = [ [ UIWindow currentFloatingWindow ] rootViewController ];
+   UIViewController* root_controller_ = [ [ UIWindow fp_currentFloatingWindow ] rootViewController ];
    if ( ![ root_controller_ isMemberOfClass: [ FPFloatingViewController class ] ] )
    {
       return;
@@ -426,5 +401,34 @@ static CGFloat FPDefaultAnimationTime = 0.3f;
    [ self dismissFloatingViewControllerAnimated: animated_ completion: nil ];
 }
 
++(BOOL)isFloatingViewControllerVisible
+{
+   return [ UIWindow fp_currentFloatingWindow ] != nil;
+}
+
 @end
 
+@implementation UIViewController (FPFloatingViewController_Customize)
+
+-(CGFloat)fp_bottomMarginInFloatingViewController
+{
+   return 20.f;
+}
+
+-(CGFloat)fp_contentHeightInFloatingViewController
+{
+   CGFloat height_ = self.contentSizeForViewInPopover.height;
+   return height_ == 0.f ? 0.f : height_ + [ self fp_bottomMarginInFloatingViewController ];
+}
+
+-(BOOL)fp_shouldShowFloatingHeader
+{
+   return YES;
+}
+
+-(BOOL)fp_shouldAddContentBackground
+{
+   return YES;
+}
+
+@end

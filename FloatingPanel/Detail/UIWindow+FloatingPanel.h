@@ -2,9 +2,9 @@
 
 @interface UIWindow (FloatingPanel)
 
-+(UIWindow*)currentFloatingWindow;
++(UIWindow*)fp_currentFloatingWindow;
 
-+(void)pushFloatingWindow:( UIWindow* )window_;
-+(void)popFloatingWindow;
++(void)fp_pushFloatingWindow:( UIWindow* )window_;
++(void)fp_popFloatingWindow;
 
 @end

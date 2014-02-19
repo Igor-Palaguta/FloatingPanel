@@ -25,4 +25,16 @@ typedef void (^FPFloatingViewControllerCompletionBlock)();
 
 -(void)dismissFloatingViewControllerAnimated:( BOOL )animated_;
 
++(BOOL)isFloatingViewControllerVisible;
+
+@end
+
+@interface UIViewController (FPFloatingViewController_Customize)
+
+-(CGFloat)fp_bottomMarginInFloatingViewController;
+-(CGFloat)fp_contentHeightInFloatingViewController;
+
+-(BOOL)fp_shouldShowFloatingHeader;
+-(BOOL)fp_shouldAddContentBackground;
+
 @end
