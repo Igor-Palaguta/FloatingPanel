@@ -6,6 +6,7 @@
 #import <KeyboardHandler/NSObject+KeyboardHandler.h>
 
 static CGFloat FPDefaultAnimationTime = 0.3f;
+static Class FPDefaultBackgroundViewClass = nil;
 
 @implementation FPFloatingOverlayView
 
@@ -14,7 +15,14 @@ static CGFloat FPDefaultAnimationTime = 0.3f;
 @synthesize headerImage;
 @synthesize borderColor;
 @synthesize borderWidth;
-@synthesize backgroundViewClass;
+
++(void)initialize
+{
+   if ( self == [ FPFloatingOverlayView class ] )
+   {
+      FPDefaultBackgroundViewClass = [ UIView class ];
+   }
+}
 
 -(id)initWithFrame:( CGRect )frame_
 {
@@ -25,6 +33,16 @@ static CGFloat FPDefaultAnimationTime = 0.3f;
       self.overlayColor = [ UIColor colorWithWhite: 0.f alpha: 0.2f ];
    }
    return self;
+}
+
++(void)setDefaultBackgroundViewClass:( Class )class_
+{
+   FPDefaultBackgroundViewClass = class_;
+}
+
++(Class)defaultBackgroundViewClass
+{
+   return FPDefaultBackgroundViewClass;
 }
 
 @end
@@ -55,7 +73,7 @@ static CGFloat FPDefaultAnimationTime = 0.3f;
 -(UIColor*)overlayColorWithVisiblePart:( CGFloat )visible_part_
 {
    CGFloat alpha_ = CGColorGetAlpha( self.overlayView.overlayColor.CGColor );
-   return [ self.overlayView.overlayColor colorWithAlphaComponent: alpha_ ];
+   return [ self.overlayView.overlayColor colorWithAlphaComponent: alpha_ * visible_part_ ];
 }
 
 -(void)moveToYOrigin:( CGFloat )origin_
@@ -154,7 +172,7 @@ static CGFloat FPDefaultAnimationTime = 0.3f;
    UIView* floating_view_ = [ [ UIView alloc ] initWithFrame: self.view.bounds ];
    if ( [ self.contentViewController fp_shouldAddContentBackground ] )
    {
-      [ floating_view_ fp_addSubviewAndScale: [ self.overlayView.backgroundViewClass new ] ];
+      [ floating_view_ fp_addSubviewAndScale: [ [ FPFloatingOverlayView defaultBackgroundViewClass ] new ] ];
       [ floating_view_ fp_setTopBorderColor: self.overlayView.borderColor
                                 borderWidth: self.overlayView.borderWidth ];
    }

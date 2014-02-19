@@ -9,7 +9,8 @@ typedef void (^FPFloatingViewControllerCompletionBlock)();
 @property ( nonatomic, strong ) UIImage* headerImage UI_APPEARANCE_SELECTOR;
 @property ( nonatomic, strong ) UIColor* borderColor UI_APPEARANCE_SELECTOR;
 @property ( nonatomic, assign ) CGFloat borderWidth UI_APPEARANCE_SELECTOR;
-@property ( nonatomic, strong ) Class backgroundViewClass UI_APPEARANCE_SELECTOR;
+
++(void)setDefaultBackgroundViewClass:( Class )class_;
 
 @end
 
