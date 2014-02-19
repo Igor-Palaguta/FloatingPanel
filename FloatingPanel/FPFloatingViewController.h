@@ -1,7 +1,5 @@
 #import <UIKit/UIKit.h>
 
-typedef void (^FPFloatingViewControllerCompletionBlock)();
-
 @interface FPFloatingOverlayView : UIView
 
 @property ( nonatomic, strong ) UIColor* overlayColor UI_APPEARANCE_SELECTOR;
@@ -13,6 +11,9 @@ typedef void (^FPFloatingViewControllerCompletionBlock)();
 +(void)setDefaultBackgroundViewClass:( Class )class_;
 
 @end
+
+
+typedef void (^FPFloatingViewControllerCompletionBlock)();
 
 @interface UIViewController (FPFloatingViewController)
 
@@ -29,6 +30,7 @@ typedef void (^FPFloatingViewControllerCompletionBlock)();
 +(BOOL)isFloatingViewControllerVisible;
 
 @end
+
 
 @interface UIViewController (FPFloatingViewController_Customize)
 

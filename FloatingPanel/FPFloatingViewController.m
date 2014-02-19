@@ -10,7 +10,7 @@ static Class FPDefaultBackgroundViewClass = nil;
 
 @implementation FPFloatingOverlayView
 
-@synthesize overlayColor = _overlayColor;
+@synthesize overlayColor;
 @synthesize headerHeight;
 @synthesize headerImage;
 @synthesize borderColor;
@@ -157,8 +157,7 @@ static Class FPDefaultBackgroundViewClass = nil;
    if ( !_overlayView )
    {
       _overlayView = [ FPFloatingOverlayView new ];
-      UIWindow* fake_window_ = [ UIWindow new ];
-      [ fake_window_ addSubview: _overlayView ];
+      [ _overlayView fp_applyAppearances ];
    }
    return _overlayView;
 }

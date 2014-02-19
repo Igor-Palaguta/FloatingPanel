@@ -9,7 +9,7 @@
 }
 
 -(void)fp_addSubviewAndScale:( UIView* )subview_
-         autoresizingMask:( UIViewAutoresizing )mask_
+            autoresizingMask:( UIViewAutoresizing )mask_
 {
    subview_.frame = self.bounds;
    subview_.autoresizingMask = mask_;
