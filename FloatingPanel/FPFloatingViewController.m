@@ -16,23 +16,15 @@ static Class FPDefaultBackgroundViewClass = nil;
 @synthesize borderColor;
 @synthesize borderWidth;
 
-+(void)initialize
++(void)load
 {
-   if ( self == [ FPFloatingOverlayView class ] )
+   @autoreleasepool
    {
+      FPFloatingOverlayView* appearance_ = [ FPFloatingOverlayView appearance ];
+      [ appearance_ setHeaderHeight: 50.f ];
+      [ appearance_ setOverlayColor: [ UIColor colorWithWhite: 0.f alpha: 0.2f ] ];
       FPDefaultBackgroundViewClass = [ UIView class ];
    }
-}
-
--(id)initWithFrame:( CGRect )frame_
-{
-   self = [ super initWithFrame: frame_ ];
-   if ( self )
-   {
-      self.headerHeight = 50.f;
-      self.overlayColor = [ UIColor colorWithWhite: 0.f alpha: 0.2f ];
-   }
-   return self;
 }
 
 +(void)setDefaultBackgroundViewClass:( Class )class_
