@@ -39,7 +39,7 @@ static Class FPDefaultBackgroundViewClass = nil;
 
 @end
 
-@interface FPFloatingViewController : UIViewController
+@interface FPFloatingViewController : UIViewController< UIGestureRecognizerDelegate >
 
 @property ( nonatomic, strong ) UIViewController* contentViewController;
 
@@ -139,7 +139,7 @@ static Class FPDefaultBackgroundViewClass = nil;
    [ self moveToYOrigin: y_origin_ animated: YES hide: hide_controller_ completion: nil ];
 }
 
--(void)didTapHeader:( UITapGestureRecognizer* )tap_recognizer_
+-(void)dismissWithGesture:( UITapGestureRecognizer* )tap_recognizer_
 {
    [ self dismissFloatingViewController: self.contentViewController animated: YES completion: nil ];
 }
@@ -157,6 +157,14 @@ static Class FPDefaultBackgroundViewClass = nil;
 -(void)loadView
 {
    self.overlayView.frame = [ UIScreen mainScreen ].bounds;
+   
+   UITapGestureRecognizer* tap_recognizer_ = [ [ UITapGestureRecognizer alloc ] initWithTarget: self
+                                                                                        action: @selector(dismissWithGesture:) ];
+
+   tap_recognizer_.delegate = self;
+
+   [ self.overlayView addGestureRecognizer: tap_recognizer_ ];
+
    self.view = self.overlayView;
    self.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 
@@ -182,11 +190,11 @@ static Class FPDefaultBackgroundViewClass = nil;
    
    UIPanGestureRecognizer* pan_recognizer_ = [ [ UIPanGestureRecognizer alloc ] initWithTarget: self
                                                                                         action: @selector(didPanHeader:) ];
-   
-   UITapGestureRecognizer* tap_recognizer_ = [ [ UITapGestureRecognizer alloc ] initWithTarget: self
-                                                                                        action: @selector(didTapHeader:) ];
 
-   header_view_.gestureRecognizers = @[pan_recognizer_, tap_recognizer_];
+   UITapGestureRecognizer* header_tap_recognizer_ = [ [ UITapGestureRecognizer alloc ] initWithTarget: self
+                                                                                               action: @selector(dismissWithGesture:) ];
+
+   header_view_.gestureRecognizers = @[pan_recognizer_, header_tap_recognizer_];
 
    [ self.floatingView addSubview: header_view_ ];
    self.headerView = header_view_;
@@ -325,6 +333,17 @@ static Class FPDefaultBackgroundViewClass = nil;
        [ self moveUp ];
     }
                      completion: nil ];
+}
+
+#pragma mark UIGestureRecognizerDelegate
+
+-(BOOL)gestureRecognizer:( UIGestureRecognizer* )gesture_recognizer_
+      shouldReceiveTouch:( UITouch* )touch_
+{
+   if ( [ touch_.view isDescendantOfView: self.floatingView ] )
+      return NO;
+
+   return YES;
 }
 
 @end
