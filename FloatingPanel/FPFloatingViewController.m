@@ -158,12 +158,13 @@ static Class FPDefaultBackgroundViewClass = nil;
 {
    self.overlayView.frame = [ UIScreen mainScreen ].bounds;
    
-   UITapGestureRecognizer* tap_recognizer_ = [ [ UITapGestureRecognizer alloc ] initWithTarget: self
-                                                                                        action: @selector(dismissWithGesture:) ];
+   UITapGestureRecognizer* outside_tap_recognizer_ =
+   [ [ UITapGestureRecognizer alloc ] initWithTarget: self
+                                              action: @selector(dismissWithGesture:) ];
 
-   tap_recognizer_.delegate = self;
+   outside_tap_recognizer_.delegate = self;
 
-   [ self.overlayView addGestureRecognizer: tap_recognizer_ ];
+   [ self.overlayView addGestureRecognizer: outside_tap_recognizer_ ];
 
    self.view = self.overlayView;
    self.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
@@ -187,12 +188,14 @@ static Class FPDefaultBackgroundViewClass = nil;
 
    header_view_.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
    header_view_.backgroundColor = [ UIColor clearColor ];
-   
-   UIPanGestureRecognizer* pan_recognizer_ = [ [ UIPanGestureRecognizer alloc ] initWithTarget: self
-                                                                                        action: @selector(didPanHeader:) ];
 
-   UITapGestureRecognizer* header_tap_recognizer_ = [ [ UITapGestureRecognizer alloc ] initWithTarget: self
-                                                                                               action: @selector(dismissWithGesture:) ];
+   UIPanGestureRecognizer* pan_recognizer_ =
+   [ [ UIPanGestureRecognizer alloc ] initWithTarget: self
+                                              action: @selector(didPanHeader:) ];
+
+   UITapGestureRecognizer* header_tap_recognizer_ =
+   [ [ UITapGestureRecognizer alloc ] initWithTarget: self
+                                              action: @selector(dismissWithGesture:) ];
 
    header_view_.gestureRecognizers = @[pan_recognizer_, header_tap_recognizer_];
 
