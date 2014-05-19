@@ -359,7 +359,6 @@ static Class FPDefaultBackgroundViewClass = nil;
    [ [ UIApplication sharedApplication ].keyWindow endEditing: YES ];
 
    UIWindow* floating_window_ = [ [ UIWindow alloc ] initWithFrame: [ UIScreen mainScreen ].bounds ];
-   floating_window_.windowLevel = UIWindowLevelStatusBar;
 
    FPFloatingViewController* floating_controller_ = [ FPFloatingViewController new ];
    floating_controller_.contentViewController = self;
