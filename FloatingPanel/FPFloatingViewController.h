@@ -17,13 +17,17 @@ typedef void (^FPFloatingViewControllerCompletionBlock)();
 
 @interface UIViewController (FPFloatingViewController)
 
+-(void)presentFloatingViewControllerAnimated:( BOOL )animated_;
+
 -(void)presentFloatingViewControllerAnimated:( BOOL )animated_
+                                  completion:( FPFloatingViewControllerCompletionBlock )completion_;
+
+-(void)presentFloatingViewControllerAnimated:( BOOL )animated_
+                                 windowLevel:( UIWindowLevel )level_
                                   completion:( FPFloatingViewControllerCompletionBlock )completion_;
 
 -(void)dismissFloatingViewControllerAnimated:( BOOL )animated_
                                   completion:( FPFloatingViewControllerCompletionBlock )completion_;
-
--(void)presentFloatingViewControllerAnimated:( BOOL )animated_;
 
 -(void)dismissFloatingViewControllerAnimated:( BOOL )animated_;
 

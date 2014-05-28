@@ -354,12 +354,13 @@ static Class FPDefaultBackgroundViewClass = nil;
 @implementation UIViewController (FPFloatingViewController)
 
 -(void)presentFloatingViewControllerAnimated:( BOOL )animated_
+                                 windowLevel:( UIWindowLevel )level_
                                   completion:( FPFloatingViewControllerCompletionBlock )completion_
 {
    [ [ UIApplication sharedApplication ].keyWindow endEditing: YES ];
 
    UIWindow* floating_window_ = [ [ UIWindow alloc ] initWithFrame: [ UIScreen mainScreen ].bounds ];
-   floating_window_.windowLevel = UIWindowLevelStatusBar;
+   floating_window_.windowLevel = level_;
 
    FPFloatingViewController* floating_controller_ = [ FPFloatingViewController new ];
    floating_controller_.contentViewController = self;
@@ -384,6 +385,14 @@ static Class FPDefaultBackgroundViewClass = nil;
     } ];
 
    [ UIWindow fp_pushFloatingWindow: floating_window_ ];
+}
+
+-(void)presentFloatingViewControllerAnimated:( BOOL )animated_
+                                  completion:( FPFloatingViewControllerCompletionBlock )completion_
+{
+   [ self presentFloatingViewControllerAnimated: animated_
+                                    windowLevel: UIWindowLevelNormal
+                                     completion: completion_ ];
 }
 
 -(void)dismissFloatingViewController:( UIViewController* )controller_
