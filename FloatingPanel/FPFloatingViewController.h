@@ -32,6 +32,7 @@ typedef void (^FPFloatingViewControllerCompletionBlock)();
 -(void)dismissFloatingViewControllerAnimated:( BOOL )animated_;
 
 +(BOOL)isFloatingViewControllerVisible;
++(void)dismissVisibleFloatingViewControllerAnimated:( BOOL )animated_;
 
 @end
 
