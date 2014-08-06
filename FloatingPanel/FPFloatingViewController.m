@@ -217,6 +217,16 @@ static Class FPDefaultBackgroundViewClass = nil;
    self.contentView = content_view_;
 }
 
+-(UIViewController*)childViewControllerForStatusBarStyle
+{
+   return self.contentViewController;
+}
+
+-(UIViewController*)childViewControllerForStatusBarHidden
+{
+   return self.contentViewController;
+}
+
 -(void)moveUp
 {
    CGRect floating_rect_ = self.view.bounds;
