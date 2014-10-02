@@ -478,6 +478,11 @@ static Class FPDefaultBackgroundViewClass = nil;
 -(CGFloat)fp_contentHeightInFloatingViewController
 {
    CGFloat height_ = self.contentSizeForViewInPopover.height;
+   if ( height_ == 0.f && [ self respondsToSelector: @selector(preferredContentSize) ] )
+   {
+      height_ = self.preferredContentSize.height;
+   }
+
    return height_ == 0.f ? 0.f : height_ + [ self fp_bottomMarginInFloatingViewController ];
 }
 
