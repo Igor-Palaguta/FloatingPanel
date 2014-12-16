@@ -292,7 +292,7 @@ static Class FPDefaultBackgroundViewClass = nil;
 
 -(NSUInteger)supportedInterfaceOrientations
 {
-   return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
+   return UIInterfaceOrientationMaskPortrait;
 }
 
 #pragma mark Keyboard relayout
